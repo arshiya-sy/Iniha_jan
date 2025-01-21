@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Iniha_jan/static/css/main.508ff29b.css",
-    "main.js": "/Iniha_jan/static/js/main.f2b69de4.js",
+    "main.css": "/Iniha_jan/static/css/main.8c393210.css",
+    "main.js": "/Iniha_jan/static/js/main.7643c135.js",
     "static/js/488.4a709cad.chunk.js": "/Iniha_jan/static/js/488.4a709cad.chunk.js",
     "static/media/iniha2.jpg": "/Iniha_jan/static/media/iniha2.b6e1123e57d0b13b8590.jpg",
     "static/media/fa-solid-900.ttf": "/Iniha_jan/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
@@ -19,12 +19,12 @@
     "static/media/fa-v4compatibility.ttf": "/Iniha_jan/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/Iniha_jan/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/Iniha_jan/index.html",
-    "main.508ff29b.css.map": "/Iniha_jan/static/css/main.508ff29b.css.map",
-    "main.f2b69de4.js.map": "/Iniha_jan/static/js/main.f2b69de4.js.map",
+    "main.8c393210.css.map": "/Iniha_jan/static/css/main.8c393210.css.map",
+    "main.7643c135.js.map": "/Iniha_jan/static/js/main.7643c135.js.map",
     "488.4a709cad.chunk.js.map": "/Iniha_jan/static/js/488.4a709cad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.508ff29b.css",
-    "static/js/main.f2b69de4.js"
+    "static/css/main.8c393210.css",
+    "static/js/main.7643c135.js"
   ]
 }
