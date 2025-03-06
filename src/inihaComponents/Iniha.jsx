@@ -12,7 +12,7 @@ class Iniha extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      investmentAmount: 9700000,
+      investmentAmount: 2500000,
       activeIndex: null,
       showPopup: false,
       showAll: false,
@@ -22,6 +22,7 @@ class Iniha extends Component {
       email: '',
       contact: '',
       isBlurred: true,
+      downloadBrochure: false
     };
   }
 
@@ -39,9 +40,10 @@ class Iniha extends Component {
     });
   };
 
-  togglePopup = () => {
+  togglePopup = (downloadBrochure = false) => {
     this.setState((prevState) => ({
       showPopup: !prevState.showPopup,
+      downloadBrochure
     }));
   };
 
@@ -67,6 +69,10 @@ class Iniha extends Component {
         (result) => {
           alert('Form submitted and email sent successfully!');
           this.setState({ isFormSubmitted: true, showPopup: false });
+          if(this.state.downloadBrochure){
+            this.handleDownloadBrochure();
+            this.setState({ downloadBrochure: false });
+          }
         },
         (error) => {
           alert('Error sending email. Please try again.');
@@ -87,7 +93,7 @@ class Iniha extends Component {
   render() {
     const { investmentAmount } = this.state;
 
-    const percentage = ((investmentAmount - 9700000) / (33600000 - 9700000)) * 100;
+    const percentage = ((investmentAmount - 2500000) / (33600000 - 2500000)) * 100;
 
     const questions = [
       {
@@ -139,18 +145,18 @@ class Iniha extends Component {
               </div>
               <div className="investment-stats">
                 <div className="stat-item">
-                  <h3>14.5%</h3>
+                  <h3>14.9%</h3>
                   <p>Target IRR</p>
                 </div>
-                <div style={{marginLeft: "-90px"}} className="stat-item">
-                  <h3>6.5%</h3>
+                <div className="stat-item">
+                  <h3>8%</h3>
                   <p>Minimum Rental Yield</p>
                 </div>
                 <div className="stat-item">
-                  <h3>₹97 Lacs</h3>
+                  <h3>₹25 Lacs</h3>
                   <p>Minimum Investment</p>
                 </div>
-                <div style={{marginLeft: "-90px"}} className="stat-item">
+                <div className="stat-item">
                   <h3>April 2025</h3>
                   <p>Handover</p>
                 </div>
@@ -207,7 +213,7 @@ class Iniha extends Component {
               <br /> <br />
               With assured rental yields and modern designs, Iniha is your trusted partner for smart investments and a prosperous future.
             </p>
-            <button className="download-brochure" onClick={this.handleDownloadBrochure}>Download Brochure</button>
+            <button className="download-brochure" onClick={() => this.togglePopup(true)}>Download Brochure</button>
           </div>
 
           <div className="investment-details">
@@ -225,7 +231,7 @@ class Iniha extends Component {
               <input
                 id="investment-range"
                 type="range"
-                min="9700000"
+                min="2500000"
                 max="33600000"
                 step="1"
                 value={investmentAmount}
@@ -388,11 +394,11 @@ class Iniha extends Component {
             <i className="fas fa-envelope"></i>
             <span>Enquire</span>
           </div>
-          <div className="contact-option" onClick={() => window.open("https://wa.me/9740084337", "_blank")}>
+          <div className="contact-option" onClick={() => window.open("https://wa.me/+917204226555", "_blank")}>
             <i className="fab fa-whatsapp"></i>
             <span>WhatsApp</span>
           </div>
-          <div className="contact-option" onClick={() => window.location.href = "tel:9740084337"}>
+          <div className="contact-option" onClick={() => window.location.href = "tel:7204226555"}>
             <i className="fas fa-phone-alt"></i>
             <span>Call</span>
           </div>
@@ -404,7 +410,9 @@ class Iniha extends Component {
               <span className="close-btn" onClick={this.togglePopup}>
                 &times;
               </span>
-              <div className="enquire-header">Enquire Now</div>
+              <div className="enquire-header">
+                Enquire Now
+              </div>
               <form className="enquiry-form" onSubmit={this.handleFormSubmit}>
                 <label>
                   Name:
