@@ -26,6 +26,16 @@ class Iniha extends Component {
     };
   }
 
+  componentDidMount() {
+    this.popupTimer = setTimeout(() => {
+      this.setState({ showPopup: true });
+    }, 30000);
+  }
+  
+  componentWillUnmount() {
+    clearTimeout(this.popupTimer);
+  }  
+
   handleScroll = (event) => {
     this.setState({ investmentAmount: parseInt(event.target.value) });
   };
@@ -153,11 +163,11 @@ class Iniha extends Component {
                   <p>Minimum Rental Yield</p>
                 </div>
                 <div className="stat-item">
-                  <h3>₹25 Lacs</h3>
+                  <h3>₹50 Lacs</h3>
                   <p>Minimum Investment</p>
                 </div>
                 <div className="stat-item">
-                  <h3>April 2025</h3>
+                  <h3>October 2025</h3>
                   <p>Handover</p>
                 </div>
               </div>
