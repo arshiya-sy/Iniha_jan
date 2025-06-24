@@ -12,7 +12,7 @@ class Iniha extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      investmentAmount: 2500000,
+      investmentAmount: 5000000,
       activeIndex: null,
       showPopup: false,
       showAll: false,
@@ -103,7 +103,7 @@ class Iniha extends Component {
   render() {
     const { investmentAmount } = this.state;
 
-    const percentage = ((investmentAmount - 2500000) / (33600000 - 2500000)) * 100;
+    const percentage = ((investmentAmount - 5000000) / (33600000 - 5000000)) * 100;
 
     const questions = [
       {
@@ -159,7 +159,7 @@ class Iniha extends Component {
                   <p>Target IRR</p>
                 </div>
                 <div className="stat-item">
-                  <h3>8%</h3>
+                  <h3>7%</h3>
                   <p>Minimum Rental Yield</p>
                 </div>
                 <div className="stat-item">
@@ -241,7 +241,7 @@ class Iniha extends Component {
               <input
                 id="investment-range"
                 type="range"
-                min="2500000"
+                min="5000000"
                 max="33600000"
                 step="1"
                 value={investmentAmount}
@@ -264,7 +264,7 @@ class Iniha extends Component {
               </div>
               <h3>High ROI</h3>
               <p>
-                Experience exceptional returns with assured rental yields of 6.5% and a conservative capital appreciation of 8% Amounting to a total of 14.5% annually.
+                Experience exceptional returns with assured rental yields of 7% and a conservative capital appreciation of 7.9% Amounting to a total of 14.5% annually.
               </p>
             </div>
             <div className="benefit-item">
@@ -273,7 +273,7 @@ class Iniha extends Component {
               </div>
               <h3>Assured Rentals</h3>
               <p>
-                Assured rentals at ₹90 per square foot, significantly higher than the market average of ₹55 per square foot in Mangalore. Our commitment ensures steady and above-market income for property owners.
+                Assured rentals at ₹95 per square foot, significantly higher than the market average of ₹55 per square foot in Mangalore. Our commitment ensures steady and above-market income for property owners.
               </p>
             </div>
             <div className="benefit-item">
