@@ -41,7 +41,7 @@ class Iniha extends Component {
   };
 
   calculateMonthlyReturn = (amount) => {
-    return ((amount / 16500) * 90).toFixed(2);
+    return ((amount / 16500) * 95).toFixed(2);
   };
 
   toggleAnswer = (index) => {
