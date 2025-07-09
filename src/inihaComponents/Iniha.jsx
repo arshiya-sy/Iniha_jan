@@ -79,6 +79,16 @@ class Iniha extends Component {
         (result) => {
           alert('Form submitted and email sent successfully!');
           this.setState({ isFormSubmitted: true, showPopup: false });
+          var callback = function () {
+            // Optional: You can redirect here if needed
+            // window.location = 'https://your-thank-you-page.com';
+          };
+          gtag('event', 'conversion', {
+            send_to: 'AW-17271635167/LuzuCKegkeQaEN_54KtA',
+            value: 1.0,
+            currency: 'INR',
+            event_callback: callback,
+          });
           if(this.state.downloadBrochure){
             this.handleDownloadBrochure();
             this.setState({ downloadBrochure: false });
