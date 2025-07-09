@@ -83,7 +83,7 @@ class Iniha extends Component {
             // Optional: You can redirect here if needed
             // window.location = 'https://your-thank-you-page.com';
           };
-          gtag('event', 'conversion', {
+          window.gtag('event', 'conversion', {
             send_to: 'AW-17271635167/LuzuCKegkeQaEN_54KtA',
             value: 1.0,
             currency: 'INR',
