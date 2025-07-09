@@ -173,7 +173,7 @@ class Iniha extends Component {
                   <p>Minimum Rental Yield</p>
                 </div>
                 <div className="stat-item">
-                  <h3>₹50 Lacs</h3>
+                  <h3>₹55 Lakh</h3>
                   <p>Minimum Investment</p>
                 </div>
                 <div className="stat-item">
